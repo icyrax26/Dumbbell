@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_height">100dp</dimen>
+    <dimen name="card_margin_bottom">5dp</dimen>
+    <dimen name="weekday_text_size">20dp</dimen>
+    <dimen name="text_header">18sp</dimen>
+    <dimen name="lift_preview_text">7sp</dimen>
+    <dimen name="lift_preview_week_day_text">5sp</dimen>
+    <dimen name="setup_label_text">18sp</dimen>
+    <dimen name="setup_edit_height">60sp</dimen>
+    <dimen name="setup_layout_padding">10sp</dimen>
+    <dimen name="setup_output_text">18sp</dimen>
+
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="pager_dot_size">8dp</dimen>
+    <dimen name="pager_height">16dp</dimen>
+    <dimen name="ob_header_top_margin">50dp</dimen>
+
+    <dimen name="ob_desc_padding">30dp</dimen>
+    <dimen name="ob_banner_height">300dp</dimen>
+    <dimen name="items_inbetween">8dp</dimen>
+
+    <dimen name="button_text">18sp</dimen>
+    <dimen name="ob_header_text_size">22sp</dimen>
+    <dimen name="ob_desc_text_size">18sp</dimen>
+</resources>
