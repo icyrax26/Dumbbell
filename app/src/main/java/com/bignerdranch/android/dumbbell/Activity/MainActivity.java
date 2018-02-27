@@ -1,7 +1,9 @@
 package com.bignerdranch.android.dumbbell.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 
 import com.bignerdranch.android.dumbbell.R;
@@ -17,10 +19,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    public void completeWorkout(View v) {
-        updateWeek();
     }
 
     public void nextWorkout(View v) {
@@ -49,6 +47,29 @@ public class MainActivity extends BaseActivity {
         workoutIntent.putExtra("week", settings.getWeek());
         MainActivity.this.startActivity(workoutIntent);
     }
+
+    public void completeWorkout(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.confirm);
+        builder.setMessage("Advance to next week?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+                updateWeek();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+//    public void completeWorkout(View v) {
+//        updateWeek();
+//      }
 
     public void updateWeek() {
         Settings settings = new Settings(this);

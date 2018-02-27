@@ -43,10 +43,6 @@
             android:screenOrientation="portrait"
             android:label="Help" />
         <activity
-            android:name=".Activity.ComingSoonActivity"
-            android:screenOrientation="portrait"
-            android:label="Coming Soon!" />
-        <activity
             android:name=".Activity.MainActivity"
             android:screenOrientation="portrait"
             android:label="MadCow 5x5" />

@@ -9,7 +9,4 @@
         android:id="@+id/help"
         android:title="Help"/>
 
-    <item
-        android:id="@+id/soon"
-        android:title="Coming Soon!"/>
 </menu>

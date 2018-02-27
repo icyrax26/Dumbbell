@@ -33,10 +33,6 @@ public class BaseActivity extends AppCompatActivity {
                 Intent helpIntent = new Intent(BaseActivity.this, HelpActivity.class);
                 BaseActivity.this.startActivity(helpIntent);
                 return true;
-            case R.id.soon:
-                Intent soonIntent = new Intent(BaseActivity.this, ComingSoonActivity.class);
-                BaseActivity.this.startActivity(soonIntent);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
