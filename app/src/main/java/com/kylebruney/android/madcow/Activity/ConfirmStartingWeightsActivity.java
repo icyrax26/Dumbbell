@@ -1,0 +1,91 @@
+package com.kylebruney.android.madcow.Activity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+import com.kylebruney.android.madcow.Lift;
+import com.kylebruney.android.madcow.R;
+import com.kylebruney.android.madcow.Settings;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ConfirmStartingWeightsActivity extends AppCompatActivity {
+    private HashMap<Lift, Integer> mStartingWeights;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_confirm_starting_weights);
+
+        ActionBar mBar = getSupportActionBar();
+        mBar.setTitle("Confirm Starting Weights");
+        mBar.setDisplayHomeAsUpEnabled(true);
+
+        mStartingWeights = (HashMap<Lift, Integer>)getIntent().getExtras().get("STARTING_WEIGHTS");
+
+        for (Map.Entry<Lift, Integer> startingWeight : mStartingWeights.entrySet()) {
+            Lift lift = startingWeight.getKey();
+            String weight = Integer.toString(startingWeight.getValue());
+
+            switch (lift) {
+                case SQUAT:
+                    ((TextView)findViewById(R.id.lift_squat)).setText(weight);
+                    break;
+                case BENCH:
+                    ((TextView)findViewById(R.id.lift_bench)).setText(weight);
+                    break;
+                case ROW:
+                    ((TextView)findViewById(R.id.lift_row)).setText(weight);
+                    break;
+                case PRESS:
+                    ((TextView)findViewById(R.id.lift_press)).setText(weight);
+                    break;
+                case DEADLIFT:
+                    ((TextView)findViewById(R.id.lift_deadlift)).setText(weight);
+                    break;
+            }
+        }
+    }
+
+    public void confirmStartingWeights(View v) {
+        Settings settings = new Settings(this);
+        for (Map.Entry<Lift, Integer> startingWeight : mStartingWeights.entrySet()) {
+            Lift lift = startingWeight.getKey();
+            int weight = startingWeight.getValue();
+
+            switch (lift) {
+                case SQUAT:
+                    settings.setStartingSquat(weight);
+                    break;
+                case BENCH:
+                    settings.setStartingBench(weight);
+                    break;
+                case ROW:
+                    settings.setStartingRow(weight);
+                    break;
+                case PRESS:
+                    settings.setStartingPress(weight);
+                    break;
+                case DEADLIFT:
+                    settings.setStartingDeadlift(weight);
+                    break;
+            }
+        }
+
+        settings.setDay(1);
+        settings.setWeek(1);
+
+        redirectToMain(v);
+    }
+
+    public void redirectToMain(View v) {
+        Intent intent = new Intent(ConfirmStartingWeightsActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+}

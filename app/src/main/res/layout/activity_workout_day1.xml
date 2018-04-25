@@ -6,7 +6,7 @@
     android:background="@color/viewBg"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context="com.bignerdranch.android.dumbbell.Activity.WorkoutActivityDayOne">
+    tools:context="com.kylebruney.android.madcow.Activity.WorkoutActivityDayOne">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,19 +36,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.bignerdranch.android.dumbbell.WorkoutRow
+        <com.kylebruney.android.madcow.WorkoutRow
             android:id="@+id/firstWorkout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_height"
             android:layout_marginBottom="@dimen/card_margin_bottom" />
 
-        <com.bignerdranch.android.dumbbell.WorkoutRow
+        <com.kylebruney.android.madcow.WorkoutRow
             android:id="@+id/secondWorkout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_height"
             android:layout_marginBottom="@dimen/card_margin_bottom" />
 
-        <com.bignerdranch.android.dumbbell.WorkoutRow
+        <com.kylebruney.android.madcow.WorkoutRow
             android:id="@+id/thirdWorkout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_height"
