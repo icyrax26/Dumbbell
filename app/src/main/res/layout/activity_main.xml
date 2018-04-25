@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Day 1 Workout"
+                    android:text="@string/day_one"
                     android:textColor="@color/primary_dark"
                     android:textSize="@dimen/text_header"
                     android:textStyle="bold" />
@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Squat, Bench and Rows"
+                    android:text="@string/day_one_workout"
                     android:textColor="@color/primary_dark"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Day 2 Workout"
+                    android:text="@string/day_two"
                     android:textColor="@color/primary_dark"
                     android:textSize="@dimen/text_header"
                     android:textStyle="bold"/>
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Squat, Press and Deadlift"
+                    android:text="@string/day_two_workout"
                     android:textColor="@color/primary_dark"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -96,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Day 3 Workout"
+                    android:text="@string/day_three"
                     android:textColor="@color/primary_dark"
                     android:textSize="@dimen/text_header"
                     android:textStyle="bold"/>
@@ -105,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Squat, Bench and Row"
+                    android:text="@string/day_three_workout"
                     android:textColor="@color/primary_dark"
                     android:textSize="14sp" />
             </LinearLayout>
